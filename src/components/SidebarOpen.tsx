@@ -9,7 +9,6 @@ import {
   Typography,
   styled,
   IconButton,
-  useTheme,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
@@ -38,29 +37,28 @@ const SidebarContainer = styled(Box)(({ theme }) => ({
   zIndex: 999999,
 }));
 
-const Logo = styled(Typography)(({ theme }) => ({
+const Logo = styled(Typography)(() => ({
   flexGrow: 1,
   display: "flex",
   alignItems: "center",
   color: "white",
 }));
 
-const LinkItem = styled(Link)(({ theme }) => ({
+const LinkItem = styled(Link)(() => ({
   textDecoration: "none",
   color: "black",
 }));
 
-const ListItemCustom = styled(ListItem)(({ theme }) => ({
+const ListItemCustom = styled(ListItem)(() => ({
   display: "block",
 }));
 
 const SidebarOpen: React.FC<SidebarOpenProps> = () => {
-  const { toggleSidebar, toggleDarkMode, isDarkMode } = useUI();
+  const { toggleSidebar, isDarkMode } = useUI();
   const location = useLocation(); // Lấy thông tin route hiện tại
 
   // Hàm kiểm tra xem route hiện tại có khớp với route của một mục không
   const isActive = (route: string): boolean => location.pathname === route;
-  const theme = useTheme(); // Lấy theme hiện tại từ MUI
 
   return (
     <SidebarContainer>

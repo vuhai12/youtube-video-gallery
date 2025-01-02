@@ -1,4 +1,4 @@
-import { Box, styled, Typography, useTheme } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 
 // Tạo styled component cho Thumbnail
 const Thumbnail = styled(Box)(() => ({
@@ -37,23 +37,6 @@ const ChannelName = styled(Typography)(({ theme }) => ({
   overflow: "hidden", // Ẩn phần mô tả vượt quá chiều rộng
   whiteSpace: "nowrap", // Không cho phép xuống dòng trong mô tả
   marginTop: "5px", // Khoảng cách giữa ChannelName và VideoInfo
-}));
-
-const WatchTime = styled("div")(({ theme }) => ({
-  fontSize: "10px", // Kích thước chữ
-  background: "rgba(0, 0, 0, 0.5)",
-  borderRadius: "3px",
-  color: "white", // Màu chữ trắng
-  textOverflow: "ellipsis", // Trường hợp mô tả quá dài, sẽ cắt bớt
-  overflow: "hidden", // Ẩn phần mô tả vượt quá chiều rộng
-  whiteSpace: "nowrap", // Không cho phép xuống dòng trong mô tả
-  position: "absolute",
-  bottom: "10px",
-  right: "10px",
-  padding: "5px",
-  textAlign: "center", // Căn giữa thời gian xem
-  display: "inline-block", // Tự động điều chỉnh kích thước theo nội dung
-  fontWeight: "bold",
 }));
 
 function VideoItem({

@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import { Box, useTheme } from "@mui/material";
 import SidebarOpen from "../components/SidebarOpen";
 import SidebarClose from "../components/SidebarClose";
-import CategoryPlaylist from "../components/CategoryPlaylist";
 import { useUI } from "../context/UIContext";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {

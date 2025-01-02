@@ -32,7 +32,7 @@ const AvatarWrapper = styled(Avatar)(({ theme }) => ({
 }));
 
 function Navbar() {
-  const { toggleSidebar, toggleDarkMode, isDarkMode } = useUI();
+  const { toggleSidebar, isDarkMode } = useUI();
   return (
     <AppBar
       position="static"

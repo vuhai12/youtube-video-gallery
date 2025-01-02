@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CategoriesItem from "./CategoriesItem";
 import VideoItem from "./VideoItem";
 import { Box, Grid, useTheme } from "@mui/material";

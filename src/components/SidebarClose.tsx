@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   List,
@@ -28,7 +27,7 @@ const SidebarContainer = styled(Box)(({ theme }) => ({
   top: "60px",
 }));
 
-const StyledListItem = styled(ListItem)(({ theme }) => ({
+const StyledListItem = styled(ListItem)(() => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -38,7 +37,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   textAlign: "center",
 }));
 
-const StyledListItemIcon = styled(ListItemIcon)(({ theme }) => ({
+const StyledListItemIcon = styled(ListItemIcon)(() => ({
   minWidth: "0",
   display: "flex",
   justifyContent: "center",
@@ -67,7 +66,7 @@ const SidebarClose = () => {
     { to: "/liked-videos", label: "Liked Videos", icon: <ThumbUpIcon /> },
   ];
 
-  const { toggleSidebar, toggleDarkMode, isDarkMode } = useUI();
+  const { isDarkMode } = useUI();
 
   return (
     <SidebarContainer>
