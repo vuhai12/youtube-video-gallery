@@ -17,11 +17,11 @@ const Theme: React.FC = () => {
         }
         label={isDarkMode ? "Dark Mode" : "Light Mode"}
         sx={{
-          display: "inline-flex", // Chỉ chiếm không gian bằng với nội dung bên trong
-          alignItems: "center", // Căn giữa Switch và label theo chiều dọc
-          width: "fit-content", // Đảm bảo chiều rộng của label chỉ bằng với Switch
+          display: "inline-flex",
+          alignItems: "center",
+          width: "fit-content",
           "& .MuiFormControlLabel-label": {
-            display: "none", // Ẩn phần label nếu không cần thiết
+            display: "none",
           },
         }}
       />

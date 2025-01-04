@@ -20,7 +20,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logoLightMode from "../assets/images/logoLightMode.png";
 import logoDarkMode from "../assets/images/logoDarkMode.png";
 import { useUI } from "../context/UIContext";
-import { useLocation, Link } from "react-router-dom"; // Thêm Link từ react-router-dom
+import { useLocation, Link } from "react-router-dom";
 
 interface SidebarOpenProps {}
 
@@ -55,14 +55,12 @@ const ListItemCustom = styled(ListItem)(() => ({
 
 const SidebarOpen: React.FC<SidebarOpenProps> = () => {
   const { toggleSidebar, isDarkMode } = useUI();
-  const location = useLocation(); // Lấy thông tin route hiện tại
+  const location = useLocation();
 
-  // Hàm kiểm tra xem route hiện tại có khớp với route của một mục không
   const isActive = (route: string): boolean => location.pathname === route;
 
   return (
     <SidebarContainer>
-      {/* Logo Section */}
       <Box
         sx={{
           display: "flex",
@@ -90,9 +88,7 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
         </Logo>
       </Box>
 
-      {/* Menu Items */}
       <List>
-        {/* Primary Section */}
         <ListItemCustom disablePadding>
           <LinkItem to="/">
             <ListItemButton
@@ -116,8 +112,8 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
 
                 width: "100%",
                 "&:hover": {
-                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0", // Màu nền khi hover
-                  color: "black", // Màu chữ khi hover
+                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0",
+                  color: "black",
                 },
               }}
             >
@@ -151,8 +147,8 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
 
                 width: "100%",
                 "&:hover": {
-                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0", // Màu nền khi hover
-                  color: "black", // Màu chữ khi hover
+                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0",
+                  color: "black",
                 },
               }}
             >
@@ -165,7 +161,6 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
         </ListItemCustom>
         <Divider />
 
-        {/* Library Section */}
         <ListItemCustom disablePadding>
           <LinkItem to="/library">
             <ListItemButton
@@ -189,8 +184,8 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
 
                 width: "100%",
                 "&:hover": {
-                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0", // Màu nền khi hover
-                  color: "black", // Màu chữ khi hover
+                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0",
+                  color: "black",
                 },
               }}
             >
@@ -224,8 +219,8 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
 
                 width: "100%",
                 "&:hover": {
-                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0", // Màu nền khi hover
-                  color: "black", // Màu chữ khi hover
+                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0",
+                  color: "black",
                 },
               }}
             >
@@ -259,8 +254,8 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
 
                 width: "100%",
                 "&:hover": {
-                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0", // Màu nền khi hover
-                  color: "black", // Màu chữ khi hover
+                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0",
+                  color: "black",
                 },
               }}
             >
@@ -294,8 +289,8 @@ const SidebarOpen: React.FC<SidebarOpenProps> = () => {
 
                 width: "100%",
                 "&:hover": {
-                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0", // Màu nền khi hover
-                  color: "black", // Màu chữ khi hover
+                  backgroundColor: isDarkMode ? "#d0d0d0" : "#e0e0e0",
+                  color: "black",
                 },
               }}
             >

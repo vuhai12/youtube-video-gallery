@@ -10,7 +10,7 @@ const CategoriesItem = ({
   onClick: () => void;
   active: boolean;
 }) => {
-  const theme = useTheme(); // Lấy theme từ context
+  const theme = useTheme();
 
   return (
     <Button
@@ -21,22 +21,22 @@ const CategoriesItem = ({
           ? theme.palette.mode === "dark"
             ? theme.palette.common.white
             : theme.palette.common.black
-          : "transparent", // Không có màu nền khi không active
+          : "transparent",
         color: active
           ? theme.palette.mode === "dark"
             ? theme.palette.common.black
             : theme.palette.common.white
           : theme.palette.mode === "dark"
-          ? theme.palette.common.white // Màu chữ trắng khi không active ở Dark Mode
-          : theme.palette.text.primary, // Màu chữ khi không active ở Light Mode
+          ? theme.palette.common.white
+          : theme.palette.text.primary,
         padding: "6px 10px",
         borderRadius: "5px",
         fontSize: "12px",
         border: active
           ? "none"
           : theme.palette.mode === "dark"
-          ? `1px solid ${theme.palette.common.white}` // Viền trắng khi không active ở Dark Mode
-          : "none", // Không có viền ở Light Mode
+          ? `1px solid ${theme.palette.common.white}`
+          : "none",
         boxShadow: "none",
         mx: "5px",
         fontWeight: "bold",
@@ -45,7 +45,7 @@ const CategoriesItem = ({
             ? theme.palette.mode === "dark"
               ? theme.palette.grey[200]
               : theme.palette.grey[900]
-            : theme.palette.grey[400], // Màu nền khi hover
+            : theme.palette.grey[400],
         },
       }}
     >

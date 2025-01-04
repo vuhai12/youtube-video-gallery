@@ -37,7 +37,7 @@ function Navbar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: (theme) => theme.palette.background.default, // Sử dụng màu nền từ theme
+        backgroundColor: (theme) => theme.palette.background.default,
         boxShadow: "none",
         borderBottom: "none",
         position: "fixed",
@@ -50,11 +50,10 @@ function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingLeft: "22px", // Ghi đè padding mặc định
-          paddingRight: "22px", // Ghi đè padding mặc định
+          paddingLeft: "22px",
+          paddingRight: "22px",
         }}
       >
-        {/* Logo bên trái */}
         <Box
           sx={{
             flex: 1,
@@ -84,22 +83,21 @@ function Navbar() {
           sx={{
             display: "flex",
             flex: 2,
-            alignItems: "center", // Căn giữa theo chiều dọc
-            justifyContent: "center", // Căn giữa các phần tử
-            gap: 1, // Khoảng cách giữa Search và Microphone
-            width: "50%", // Kích thước tổng chiều dài Box
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 1,
+            width: "50%",
           }}
         >
-          {/* Search Box */}
           <Box
             sx={{
               display: "flex",
               height: "40px",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: (theme) => theme.palette.background.paper, // Màu nền từ theme
+              backgroundColor: (theme) => theme.palette.background.paper,
               borderRadius: 30,
-              flexGrow: 1, // Để Search Box chiếm toàn bộ không gian khả dụng
+              flexGrow: 1,
               border: "1px solid #ccc",
               "&:hover": {
                 borderColor: "#888",
@@ -114,7 +112,7 @@ function Navbar() {
                 paddingRight: 3,
                 "& .MuiInputBase-input": {
                   padding: "10px 10px",
-                  color: (theme) => theme.palette.text.primary, // Màu chữ từ theme
+                  color: (theme) => theme.palette.text.primary,
                 },
               }}
             />
@@ -129,19 +127,17 @@ function Navbar() {
               sx={{
                 padding: 1,
                 height: "38px",
-                backgroundColor: isDarkMode ? "#333" : "#f0f0f0", // Chế độ tối sẽ có màu nền khác
+                backgroundColor: isDarkMode ? "#333" : "#f0f0f0",
                 borderRadius: "0 50% 50% 0",
                 "&:hover": {
-                  backgroundColor: isDarkMode ? "#555" : "#d0d0d0", // Chế độ tối cũng có màu hover khác
+                  backgroundColor: isDarkMode ? "#555" : "#d0d0d0",
                 },
               }}
             >
               <SearchIcon sx={{ color: isDarkMode ? "white" : "black" }} />{" "}
-              {/* Màu icon thay đổi theo chế độ */}
             </IconButton>
           </Box>
 
-          {/* Microphone Icon */}
           <IconButton
             edge="end"
             color="inherit"
@@ -149,7 +145,7 @@ function Navbar() {
             sx={{
               padding: 1,
               backgroundColor: "#f0f0f0",
-              borderRadius: "50%", // Bo tròn nút Microphone
+              borderRadius: "50%",
               "&:hover": {
                 backgroundColor: "#d0d0d0",
               },
@@ -159,16 +155,14 @@ function Navbar() {
           </IconButton>
         </Box>
 
-        {/* Avatar bên phải */}
         <Box
           sx={{
             display: "flex",
-            alignItems: "center", // Căn giữa các phần tử theo chiều dọc
+            alignItems: "center",
             flex: 1,
             justifyContent: "flex-end",
           }}
         >
-          {/* Icon Notifications */}
           <IconButton
             edge="end"
             color="inherit"
@@ -178,11 +172,7 @@ function Navbar() {
             <NotificationsIcon sx={{ color: "gray" }} />{" "}
           </IconButton>
           <Theme />
-          <AvatarWrapper
-            alt="User Avatar"
-            src={avatar}
-            sx={{ ml: 2 }} // Khoảng cách giữa Theme và Avatar
-          />
+          <AvatarWrapper alt="User Avatar" src={avatar} sx={{ ml: 2 }} />
         </Box>
       </Toolbar>
     </AppBar>

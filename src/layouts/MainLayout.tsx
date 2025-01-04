@@ -17,24 +17,20 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           height: "100vh",
           width: "100%",
           marginTop: "50px",
-          backgroundColor: theme.palette.background.default, // Áp dụng màu nền từ theme
+          backgroundColor: theme.palette.background.default,
         }}
       >
-        {/* Sidebar */}
         <Box sx={{ width: "60px", flexShrink: 0 }}>
           {isSidebarOpen ? <SidebarOpen /> : <SidebarClose />}
         </Box>
 
-        {/* Nội dung chính */}
         <Box
           sx={{
             flexGrow: 1,
             padding: "16px",
-            overflowY: "auto",
-            backgroundColor: theme.palette.background.paper, // Áp dụng màu nền từ theme cho nội dung chính
+            backgroundColor: theme.palette.background.paper,
           }}
         >
-          {/* <CategoryPlaylist /> */}
           {children}
         </Box>
         {isSidebarOpen && (
@@ -45,8 +41,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
               left: 0,
               width: "100%",
               height: "100vh",
-              backgroundColor: "rgba(0, 0, 0, 0.5)", // Màu đen mờ
-              zIndex: 99999, // Đảm bảo lớp phủ này nằm dưới nội dung và sidebar
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              zIndex: 99999,
             }}
             onClick={toggleSidebar}
           />
