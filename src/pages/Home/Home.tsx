@@ -90,9 +90,11 @@ const Home: React.FC = () => {
   }, [playlistId]);
 
   const handleClick = (item: Category) => {
-    setSelected(item.channel);
-    setPlaylistId(item.playlistId);
-    setListVideos([]); // Xóa danh sách video khi chuyển category
+    if (item.playlistId !== playlistId) {
+      setSelected(item.channel);
+      setPlaylistId(item.playlistId);
+      setListVideos([]);
+    }
   };
 
   const getListVideo = async (
